@@ -1,3 +1,29 @@
+<?php
+  
+  $servername = "localhost";
+  $username = "username";
+  $password = "password";
+  $database = "";
+
+
+  $q1 = $_POST["q1"];
+  $q2 = $_POST["q2"];
+  $q3 = $_POST["q3"];
+  $q4 = $_POST["q4"];
+  $q5 = $_POST["q5"];
+  $q6 = $_POST["q6"];
+  $q7 = $_POST["q7"];
+  $q8 = $_POST["q8"];
+  $q9 = $_POST["q9"];
+  $q10 = $_POST["q10"];
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+
+  
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
