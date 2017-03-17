@@ -2,14 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Flat UI Free 101 Template</title>
+    <title>十题问答 - 北工大科幻协会</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Loading Bootstrap -->
-    <link href="/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Loading Flat UI -->
-    <link href="/css/flat-ui.min.css" rel="stylesheet">
+    <link href="css/flat-ui.min.css" rel="stylesheet">
+
+    <link href="css/index.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="img/favicon.ico">
 
@@ -21,16 +23,90 @@
   </head>
   <body>
     <div class="container">
-        <h1>Hello, world!</h1>
+        <h4 class="text-center title">十题问答 - 答题纸</h4>
+        <p class="text-right text-gray">北京工业大学-科幻协会</p>
+        <hr>
+        <img src="img/qrcode.png" class="qr-img">
+        <p class="text-center text-gray">↑↑↑答题二维码↑↑↑</p>
+        <p class="text-center text-gray">电脑答题网址：<a href="http://sfa.space.ac.cn/1/">sfa.space.ac.cn/1</a></p>
+        <hr>
+        <form method="POST" role="form" action="submit.php">
+            <div class="question">
+              <p>1 20世纪初的英国科幻作家、与儒勒·凡尔纳并称为“科幻之父”的H·G·威尔斯，曾经为后世的科幻作品开创了哪些题材？</p>
+              <textarea class="form-control" rows="4" name="q1" id="q1"></textarea>
+              <br>
+            </div>
+            <div class="question">
+              <p>2 有哪些严肃文学作家写过科幻作品，作品名是什么？</p>
+              <textarea class="form-control" rows="4" name="q2" id="q2"></textarea>
+              <br>
+            </div>
+            <div class="question">
+              <p>3 “黄金时代三巨头”之一、英国科幻作家阿瑟·克拉克，曾经提出过哪个后来实现了的科学技术？他还预言过哪些其他的科学技术？</p>
+              <textarea class="form-control" rows="4" name="q3" id="q3"></textarea>
+              <br>
+            </div>
+            <div class="question">
+              <p>4 科幻作品中有哪些无类人实体的AI角色（也就是非机器人的AI角色）？出自哪部作品？</p>
+              <textarea class="form-control" rows="4" name="q4" id="q4"></textarea>
+              <br>
+            </div>
+            <div class="question">
+              <p>5 受过著名科幻恐怖作家H·P·洛夫克拉夫特笔下的克苏鲁神话的影响的小说/电影/动画/游戏有哪些？</p>
+              <textarea class="form-control" rows="4" name="q5" id="q5"></textarea>
+              <br>
+            </div>
+            <div class="question">
+              <p>6 有哪些黄金时代的科幻作家受到过著名科幻杂志《惊奇故事》主编约翰·坎贝尔的提拔，或在其杂志上发表过作品？</p>
+              <textarea class="form-control" rows="4" name="q6" id="q6"></textarea>
+              <br>
+            </div>
+            <div class="question">
+              <p>7 “蒸汽朋克”和“赛博朋克”之类的科幻子分类中均含有“朋克”的概念，这个概念代表了一种怎样的价值/美学倾向？</p>
+              <textarea class="form-control" rows="4" name="q7" id="q7"></textarea>
+              <br>
+            </div>
+            <div class="question">
+              <p>8 以《魔戒》为代表的史诗奇幻和以《冰与火之歌》为代表的新史诗奇幻之间的区别有哪些？</p>
+              <textarea class="form-control" rows="4" name="q8" id="q8"></textarea>
+              <br>
+            </div>
+            <div class="question">
+              <p>9 举出几个写过科幻也写过奇幻，或者写过科幻/奇幻跨界作品的作家。</p>
+              <textarea class="form-control" rows="4" name="q9" id="q9"></textarea>
+              <br>
+            </div>
+            <div class="question">
+              <p>10 举出几个20世纪的中国科幻作家。（也就是在《科幻世界》创刊之前便已出道的科幻作家）</p>
+              <textarea class="form-control" rows="4" name="q10" id="q10"></textarea>
+              <br>
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="exampleInputEmail1">您的姓名</label>
+              <input type="text" class="form-control" id="name" placeholder="请留下您的尊姓大名~" name="name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">您的邮箱</label>
+              <input type="email" class="form-control" id="email" placeholder="酱紫方便我们联系您" name="email">
+            </div>
+            <br>
+            <button title="交卷" data-placement="top" data-toggle="tooltip" class="btn btn-primary mrs btn-full" type="submit" data-original-title="交完卷可不能反悔哦">交卷！</button>
+            <br>
+            <br>
+            <hr>
+            <p class="text-center text-gray">Coding & Presented by 星沉</p>
+        </form>
+
     </div>
     <!-- /.container -->
 
 
     <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
-    <script src="/js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/js/vendor/video.js"></script>
-    <script src="/js/flat-ui.min.js"></script>
+    <script src="js/vendor/video.js"></script>
+    <script src="js/flat-ui.min.js"></script>
 
   </body>
 </html>
