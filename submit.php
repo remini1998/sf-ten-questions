@@ -3,9 +3,22 @@
   $servername = "localhost";
   $username = "username";
   $password = "password";
-  $database = "";
+  $dbname = "";
 
+  // 创建连接
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  // 检测连接
+  if ($conn->connect_error) {
+      die("连接失败: " . $conn->connect_error);
+  } 
 
+  // 预处理及绑定
+  $stmt = $conn->prepare(
+    "INSERT INTO Answer (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, name, email)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+  $stmt->bind_param("ssssssssssss",$q1, $q2, $q3, $q4, $q5, $q6, $q7, $q8, $q9, $q10, $name, $email);
+
+  // 设置参数并执行
   $q1 = $_POST["q1"];
   $q2 = $_POST["q2"];
   $q3 = $_POST["q3"];
@@ -19,7 +32,10 @@
   $name = $_POST["name"];
   $email = $_POST["email"];
 
-  
+  $stmt->execute();
+
+  $stmt->close();
+  $conn->close();
 
 
 ?>
